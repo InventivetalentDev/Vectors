@@ -39,6 +39,52 @@ public class Vectors {
 
 	static final Random RANDOM = new Random();
 
+	// Center
+
+	public static Vector3DDouble center3Double(Iterable<Vector3DDouble> vectors) {
+		Vector3DDouble sum = new Vector3DDouble(0, 0, 0);
+		int i = 0;
+		for (Vector3DDouble vector : vectors) {
+			sum = sum.add(vector);
+			i++;
+		}
+		if (i == 0) { return sum; }
+		return sum.divide((double) i);
+	}
+
+	public static Vector3DInt center3Int(Iterable<Vector3DInt> vectors) {
+		Vector3DInt sum = new Vector3DInt(0, 0, 0);
+		int i = 0;
+		for (Vector3DInt vector : vectors) {
+			sum = sum.add(vector);
+			i++;
+		}
+		if (i == 0) { return sum; }
+		return sum.divide(i);
+	}
+
+	public static Vector2DDouble center2Double(Iterable<Vector2DDouble> vectors) {
+		Vector2DDouble sum = new Vector2DDouble(0, 0);
+		int i = 0;
+		for (Vector2DDouble vector : vectors) {
+			sum = sum.add(vector);
+			i++;
+		}
+		if (i == 0) { return sum; }
+		return sum.divide((double) i);
+	}
+
+	public static Vector2DInt center2Int(Iterable<Vector2DInt> vectors) {
+		Vector2DInt sum = new Vector2DInt(0, 0);
+		int i = 0;
+		for (Vector2DInt vector : vectors) {
+			sum = sum.add(vector);
+			i++;
+		}
+		if (i == 0) { return sum; }
+		return sum.divide(i);
+	}
+
 	// Min
 
 	public static Vector3DDouble min(Vector3DDouble a, Vector3DDouble b) {
