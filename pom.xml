@@ -34,7 +34,7 @@
 
     <groupId>org.inventivetalent</groupId>
     <artifactId>vectors</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Vectors</name>
 
     <build>
@@ -102,14 +102,9 @@
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.9-R0.1-SNAPSHOT</version>
+            <artifactId>spigot-api</artifactId>
+            <version>1.12-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.9-R0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -135,18 +130,6 @@
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>sk89q-repo</id>
-            <url>http://maven.sk89q.com/artifactory/repo/</url>
-        </repository>
-        <repository>
-            <id>techcable-repo</id>
-            <url>http://repo.techcable.net/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>mcstats-repo</id>
-            <url>http://repo.mcstats.org/content/groups/public/</url>
         </repository>
     </repositories>
 </project>
