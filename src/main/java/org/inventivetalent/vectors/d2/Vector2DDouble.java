@@ -29,11 +29,7 @@
 package org.inventivetalent.vectors.d2;
 
 import com.google.gson.annotations.Expose;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@Data
-@AllArgsConstructor
 public class Vector2DDouble implements IVector2D<Double> {
 
 	public static final Vector2DDouble ZERO = new Vector2DDouble(0, 0);
@@ -43,6 +39,11 @@ public class Vector2DDouble implements IVector2D<Double> {
 
 	public Vector2DDouble(Vector2DInt intVector) {
 		this(intVector.getX().doubleValue(), intVector.getY().doubleValue());
+	}
+
+	public Vector2DDouble(double x, double y) {
+		this.x = x;
+		this.y = y;
 	}
 
 	// Add

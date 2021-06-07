@@ -29,14 +29,10 @@
 package org.inventivetalent.vectors.d3;
 
 import com.google.gson.annotations.Expose;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.util.Vector;
 
-@Data
-@AllArgsConstructor
 public class Vector3DDouble implements IVector3D<Double> {
 
 	public static final Vector3DDouble ZERO = new Vector3DDouble(0, 0, 0);
@@ -47,6 +43,12 @@ public class Vector3DDouble implements IVector3D<Double> {
 
 	public Vector3DDouble(Vector3DInt intVector) {
 		this(intVector.getX().doubleValue(), intVector.getY().doubleValue(), intVector.getZ().doubleValue());
+	}
+
+	public Vector3DDouble(double x, double y, double z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
 	}
 
 	public Vector3DDouble(Vector vector) {

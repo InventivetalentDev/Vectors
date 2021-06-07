@@ -29,11 +29,7 @@
 package org.inventivetalent.vectors.d3;
 
 import com.google.gson.annotations.Expose;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
-@Data
-@AllArgsConstructor
 public class Vector3DInt implements IVector3D<Integer> {
 
 	public static final Vector3DInt ZERO = new Vector3DInt(0, 0, 0);
@@ -44,6 +40,12 @@ public class Vector3DInt implements IVector3D<Integer> {
 
 	public Vector3DInt(Vector3DDouble doubleVector) {
 		this(doubleVector.getX().intValue(), doubleVector.getY().intValue(), doubleVector.getZ().intValue());
+	}
+
+	public Vector3DInt(int x, int y, int z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
 	}
 
 	// Add
